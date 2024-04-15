@@ -1,0 +1,66 @@
+<!-- 
+<h2 style="text-align: center;">Flight Details</h2><table id="flights" class="flex-table">
+<thead style="position: sticky; top: 0px; background-color: white; z-index: 1;">
+    <tr style="background-color: #9f9f9f;">
+        <th>Flight Id</th>
+        <th>Aircraft Id</th>
+        <th>Aircraft Name</th>
+        <th>Serial Number</th>
+        <th>Date</th>
+        <th>Departure</th>
+        <th>Destination</th>
+    </tr>
+
+</thead>
+<tbody>
+    <tr>
+<td>{{flights.id}}</td>
+<td>{{flights.aircraft.id}}</td>
+<td>{{flights.aircraft.name}}</td>
+<td>{{flights.aircraft.serial_number}}</td>
+<td>{{flights.date | date:'medium'}}</td>
+<td>{{flights.departure}}</td>
+<td>{{flights.destination}}</td>
+</tr>
+ -->
+
+ <div id="container">
+ <div  style="float:right; " >
+
+ <button  (click)='generateJPG()'><img class="icons" src ="../../assets/images/jpg.png">JPG</button>
+ <button  (click)='generatePDF()'><img class="icons" src ="../../assets/images/pdf.png">PDF</button>
+ </div>
+ <div class="box">
+    <div #flight >
+        <h2 style="text-align: center;">Flight Details</h2>
+        <div class="content">
+        <p><b>Flight Log Id :</b> {{flights.id}}</p>
+        <p><b>Aircraft Id : </b>{{flights.aircraft.id}}</p>
+        <p><b>Aircraft Name : </b>{{flights.aircraft.name}}</p>
+        <p><b>Serial Number : </b>{{flights.aircraft.serial_number}}</p>
+        <p><b>Date : </b>{{flights.date | date:'medium'}}</p>
+        <p><b>Departure : </b>{{flights.departure}}</p>
+        <p><b>Destination : </b>{{flights.destination}}</p>
+        </div>
+        
+    </div>
+  </div>
+
+</div>
+  <!-- <div class="card" style="width: 18rem;">
+    <div class="card-header">
+      Flight Details
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><b>Flight Log Id :</b> {{flights.id}}</li>
+      <li class="list-group-item"><b>Aircraft Id : </b>{{flights.aircraft.id}}</li>
+      <li class="list-group-item"><b>Aircraft Name : </b>{{flights.aircraft.name}}</li>
+      <li class="list-group-item"><b>Serial Number : </b>{{flights.aircraft.serial_number}}</li>
+      <li class="list-group-item"><b>Date : </b>{{flights.date | date:'medium'}}</li>
+      <li class="list-group-item"><b>Departure : </b>{{flights.departure}}</li>
+      <li class="list-group-item"><b>Destination : </b>{{flights.destination}}</li>
+
+
+    </ul>
+  </div>
+   -->

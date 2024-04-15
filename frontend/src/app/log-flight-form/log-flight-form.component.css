@@ -1,0 +1,67 @@
+/* product-form.component.css */
+ 
+/* Center the form */
+.container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Form styling */
+  form {
+    margin: 0 auto;
+    display:flexbox;
+    width: 600px; /* Adjust as needed */
+    padding: 20px;
+    border: 1px solid rgb(202, 173, 173);
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  textarea,
+  input[type="number"],
+  input[type="date"] {
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  button[type="submit"] {
+    width: 50%;
+    padding: 10px;
+    background-color: #00aeff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+
+  }
+  
+  /* Validation Error Style */
+  .ng-invalid {
+    border: 1px solid rgb(119, 0, 255);
+  }
+  select#aircraftId {
+    width: 80%; /* Adjust as needed */
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}

@@ -1,0 +1,11 @@
+.navbar-brand {
+    text-align: center;
+    width: 100%; /* Set the width to fill the available space */
+  }
+  
+  .navbar-brand h1 {
+    text-align: center;
+    margin:20px; 
+    margin-left: 300px;/* Remove default margin */
+  }
+  

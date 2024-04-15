@@ -1,0 +1,172 @@
+tr{
+    border: 1px solid #f3f3f3;
+}
+
+tr:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.clickable-row {
+  display: table-row;
+  cursor: pointer;
+  margin: 200px;
+}
+
+.clickable-row:hover {
+  display: table-row;
+  cursor: pointer;
+  background-color: rgb(224, 224, 224);
+}
+
+.table-container {
+  height: 100%;
+  overflow-y: auto; 
+  scrollbar-width: thin;
+}
+
+.flex-table {
+  width: 100%;
+  border-collapse: collapse;
+  z-index: 1;
+}
+
+.flex-table th,
+.flex-table td {
+  padding: 18px 16px;
+  border: 1px solid #ccc;
+}
+
+.flex-table thead th {
+  background-color:rgba(255, 255, 255, 0.377); 
+  
+}
+
+.flex-table tbody  {
+  background-color: #f9f9f9;
+}
+
+:host {
+  display: flex;
+  height: calc(100% - 10px);
+  flex-direction: column;
+}
+
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(10, 10, 10);
+  background-color:rgb(182, 175, 175);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin : 15px;
+}
+
+button:hover {
+  background-color: #7a7a7a;
+}
+
+button:disabled{
+  background-color: rgb(112, 112, 112);
+}
+
+.icons{
+  width : 15px;
+  height : 15px;
+  margin-right : 5px;
+  margin-left : 5px;
+}
+
+#nothing{
+  width: 300;
+  height: 300;
+}
+
+table{
+  text-align: center;
+}
+
+.not-found{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input{
+  padding: 5px;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  border-width: 3px;
+  transition: border-color 0.5s ease
+}
+
+input:focus, input:hover{
+  border-color: rgb(126, 151, 206);
+}
+.box {
+    margin: 10px;
+    border: 3px solid rgb(35, 36, 37);
+    padding: 20px;
+    width: 500px; /* Set width as per your requirement */
+    margin: 0 auto; /* Center the box horizontally */
+    background-color:rgba(240, 235, 243, 0.884);
+    border-radius: 3%;
+  }
+  button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(10, 10, 10);
+  background-color:rgb(182, 175, 175);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin : 15px;
+}
+
+button:hover {
+  background-color: #7a7a7a;
+}
+
+button:disabled{
+  background-color: rgb(112, 112, 112);
+}
+  
+    
+
+  
+  /* .content {
+    /* Optionally, you can add more styling to the content area */
+  /* } */ 
+  
+
+
+
+ 
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-start;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(254, 254, 254, 0.5) ),url('src/assets/images/flight.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(100px);
+    
+}

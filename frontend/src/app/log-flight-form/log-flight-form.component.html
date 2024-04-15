@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+<form [formGroup]="flightForm" (ngSubmit)="onSubmit()">
+    <label for="aircraftId">Aircraft Id</label>
+    <select id="aircraftId" class="form-control" formControlName="aircraftId" required>
+        <option *ngFor="let p of aircrafts" [value]="p.id">{{ p.id }}</option>
+    </select>
+    <div *ngIf="flightForm.get('aircraftId').invalid && (flightForm.get('aircraftId').touched || submitted)">
+        <span *ngIf="flightForm.get('aircraftId').errors?.required" style="color: red;">Aircraft Id is required.</span>
+    </div>    
+    <br>
+    
+    <label for="departure">Departure:</label>
+    <input type="text" formControlName="departure" required>
+    <div *ngIf="flightForm.get('departure').invalid && (flightForm.get('departure').touched || submitted)">
+        <span *ngIf="flightForm.get('departure').errors?.required" style="color: red;">Departure is required.</span>
+        <span *ngIf="flightForm.get('departure').errors?.pattern" style="color: red;">Departure must contain only letters.</span>
+    </div>
+    <br>
+
+    <label for="destination">Destination:</label>
+    <input type="text" formControlName="destination" required>
+    <div *ngIf="flightForm.get('destination').invalid && (flightForm.get('destination').touched || submitted)">
+        <span *ngIf="flightForm.get('destination').errors?.required" style="color: red;">Destination is required.</span>
+        <span *ngIf="flightForm.get('destination').errors?.pattern" style="color: red;">Destination must contain only letters.</span>
+    </div>
+    <br>
+
+    <label for="arrivalDate">Arrival Date:</label>
+    <input type="date" formControlName="arrivalDate" required>
+    <div *ngIf="flightForm.get('arrivalDate').invalid && (flightForm.get('arrivalDate').touched || submitted)">
+        <span *ngIf="flightForm.get('arrivalDate').errors?.required" style="color: red;">Arrival Date is required.</span>
+    </div>
+    <br>
+    
+    <button type="submit" (click)="submitted = true" >Add FlightLog Details</button>
+</form>

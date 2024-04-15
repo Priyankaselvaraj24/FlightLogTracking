@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+<div style="margin: 10px; display: flex; justify-content: space-between;">
+    <div style="align-content: center; flex: 1; font-size: 30px; font-weight: bold;">
+        List of Flight Logs ({{filteringflights.length}})
+    </div>
+    <div  style="float: right; ">
+        <input type="text" id="search" #criteriaflight
+                (input)="updateCriteriaflight(criteriaflight.value)"
+                placeholder="Search by FlightLog Id"/>
+                <input type="text" id="search" #criteria
+                (input)="updateCriteria(criteria.value)"
+                placeholder="Filter by Aircraft"/>
+
+        <button [disabled]='!filteringflights.length' (click)='generateJPG()'><img class="icons" src ="../../assets/images/jpg.png">JPG</button>
+        <button [disabled]='!filteringflights.length' (click)='generatePDF()'><img class="icons" src ="../../assets/images/pdf.png">PDF</button>
+        <button [disabled]='!filteringflights.length' (click)='generateExcel()'><img class="icons" src ="../../assets/images/sheet.png">Excel</button>
+        
+    </div>
+</div>
+<div  [ngClass]='filteringflights.length?"table-container":"not-found"' class="table-container" style="border: 0px solid black;">
+    <img *ngIf='!filteringflights.length' id="nothing" src="../../assets/images/nothing.png" width="400" height="400"/>
+        <div *ngIf='!filteringflights.length'>No Records Found</div>
+    <table #flight   id="flights" class="flex-table" >
+        <thead *ngIf='filteringflights.length' style="position: sticky; top: 0px; background-color: white; z-index: 1;">
+            <tr style="background-color: #adb1b9;">
+                <th>Flight Id</th>
+                <th>Aircraft Id</th>
+                <th>Date</th>
+                <th>Departure</th>
+                <th>Destination</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+                <!-- <tr class="clickable-row" [routerLink]="['/ledgers', a.ledgerId]"> -->
+        <tr *ngFor="let a of filteringflights" (click)="viewFlightDetails(a.id)">
+                    <td>{{a.id}}</td>
+                    <td>{{a.aircraft.id}}</td>
+                    <td>{{a.date | date:'mediumDate'}}</td>
+                    <td>{{a.departure}}</td>
+                    <td>{{a.destination}}</td>
+                    </tr>
+                <!-- </tr>  -->
+        </tbody>
+    </table>
+</div>
